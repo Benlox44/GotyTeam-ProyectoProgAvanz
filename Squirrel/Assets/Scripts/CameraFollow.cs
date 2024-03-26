@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -6,11 +7,18 @@ public class CameraFollow : MonoBehaviour
     private float smoothTime = 0.25f;
     private Vector3 velocity = Vector3.zero;
 
+    public Vector2 minPosition;
+    public Vector2 maxPosition;
+
     [SerializeField] private Transform target;
 
     private void Update()
     {
         Vector3 targetPosition = target.position + offset;
+
+        targetPosition.x = math.clamp(target.position.x, minPosition.x, maxPosition.x);
+        targetPosition.y = math.clamp(target.position.y, minPosition.y, maxPosition.y);
+
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-    }
+    }   
 }
