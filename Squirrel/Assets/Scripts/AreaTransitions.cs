@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AreaTransitions : MonoBehaviour
-{
+public class AreaTransitions : MonoBehaviour {
     private CameraController cam;
     public Vector2 newMinPos;
     public Vector2 newMaxPos;
