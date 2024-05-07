@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour {
     private Animator myAnim;
     private Transform target;
-    public Transform homePos;
+    [SerializeField] private Transform homePos;
     [SerializeField] private float speed;
     [SerializeField] private float maxRange;
     [SerializeField] private float minRange;

@@ -1,27 +1,45 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class HurtPlayer : MonoBehaviour {
-    [SerializeField] private float waitToLoad;
-    private bool reloading;
+    private Health health;
+    [SerializeField] private int damageToGive;
+    [SerializeField] private float attackCooldown;
+    private float attackTimer;
+    private bool isTouching;
+    private bool canAttack;
 
     void Start() {
-        
+        health = FindObjectOfType<Health>();
+        canAttack = true;
+        attackTimer = attackCooldown;
     }
 
     void Update() {
-        if (reloading) {
-            waitToLoad -= Time.deltaTime;
-            if (waitToLoad <= 0) {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (isTouching && canAttack) Attack();
+
+        if (!canAttack) {
+            attackTimer -= Time.deltaTime;
+            if (attackTimer <= 0f) {
+                canAttack = true;
+                attackTimer = attackCooldown;
             }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.collider.tag == "Player") {
-            other.gameObject.SetActive(false);
-            reloading = true;
-        }
+        if (other.collider.tag == "Player" && canAttack) Attack();
+    }
+
+    private void OnCollisionStay2D(Collision2D other) {
+        if (other.collider.tag == "Player") isTouching = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+        if (other.collider.tag == "Player") isTouching = false;
+    }
+
+    private void Attack() {
+        canAttack = false;
+        health.HurtPlayer(damageToGive);
     }
 }

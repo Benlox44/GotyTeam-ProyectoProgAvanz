@@ -1,23 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     private Rigidbody2D rigidBody;
     private Animator animator;
+    [SerializeField] private float speed;
 
-    [SerializeField]
-    private float speed;
-
-    void Start()
-    {
+    void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
-    void Update()
-    {
+    void Update() {
         rigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * speed;
 
         animator.SetFloat("moveX", rigidBody.velocity.x);
