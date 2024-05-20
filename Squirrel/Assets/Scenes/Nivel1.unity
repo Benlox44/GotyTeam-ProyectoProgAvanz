@@ -1914,7 +1914,7 @@ Transform:
   m_GameObject: {fileID: 536963214}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.95, y: 6.72, z: -0.081962444}
+  m_LocalPosition: {x: 3.86, y: 10.27, z: -0.081962444}
   m_LocalScale: {x: 0.6907517, y: 0.6907517, z: 0.6907517}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28285,7 +28285,7 @@ Transform:
   m_GameObject: {fileID: 731459229}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.71, y: 6.29, z: 0}
+  m_LocalPosition: {x: 3.86, y: 10.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56361,7 +56361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106073000}
   m_Layer: 0
-  m_Name: HomePositionClown
+  m_Name: HomePosition (Clown)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57189,7 +57189,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.399086, y: 1.6795444}
+  m_Size: {x: 2, y: 1.6795444}
   m_EdgeRadius: 0
 --- !u!212 &1450265503
 SpriteRenderer:
@@ -57252,7 +57252,7 @@ Transform:
   m_GameObject: {fileID: 1450265498}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.33879, y: 22.634127, z: 0}
+  m_LocalPosition: {x: 76.33879, y: 22.63413, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -57271,7 +57271,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450265498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 361175ee9a6240248b38bbbd8cc7ff81, type: 3}
+  m_Script: {fileID: 11500000, guid: 395dd53589dd4ce4aabf9bf1eb2d8c2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 1
@@ -57285,13 +57285,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1450265498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b690ffa57429897478b2137f2e80e6d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fdd3bdce37829241a03e92294f75d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   homePos: {fileID: 1106073000}
   speed: 3
-  maxRange: 8
-  minRange: 1
+  maxRange: 5
+  minRange: 0.7
 --- !u!1 &1487544073
 GameObject:
   m_ObjectHideFlags: 0
@@ -58140,7 +58140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1727305757}
   m_Layer: 0
-  m_Name: HomePosition
+  m_Name: HomePosition (Boar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82015,14 +82015,14 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 487367115}
+  - {fileID: 572238166}
   - {fileID: 1502808485}
   - {fileID: 43620483}
   - {fileID: 1256232725}
   - {fileID: 1703701707}
-  - {fileID: 572238166}
+  - {fileID: 1727305757}
   - {fileID: 1355572073}
   - {fileID: 1424519904}
-  - {fileID: 1727305757}
   - {fileID: 153901091}
   - {fileID: 1895915381}
   - {fileID: 1494909774}

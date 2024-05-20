@@ -4,6 +4,7 @@ public class HurtPlayer : MonoBehaviour {
     private Health health;
     [SerializeField] private int damageToGive;
     [SerializeField] private float attackCooldown;
+    private Animator animator;
     private float attackTimer;
     private bool isTouching;
     private bool canAttack;
@@ -12,6 +13,7 @@ public class HurtPlayer : MonoBehaviour {
         health = FindObjectOfType<Health>();
         canAttack = true;
         attackTimer = attackCooldown;
+        animator = GetComponent<Animator>();
     }
 
     void Update() {
@@ -40,6 +42,7 @@ public class HurtPlayer : MonoBehaviour {
 
     private void Attack() {
         canAttack = false;
+        animator.SetTrigger("Attack");
         health.HurtPlayer(damageToGive);
     }
 }
