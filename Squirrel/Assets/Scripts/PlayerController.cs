@@ -5,21 +5,54 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
     [SerializeField] private float speed;
 
+    private float attackTime;
+    private float attackCounter;
+    private bool isAttacking;
+
     void Start() {
+        attackTime = 0.5f;
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     void Update() {
-        rigidBody.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * speed;
+        HandleMovement();
+        UpdateAnimatorParameters();
+        HandleAttack();
+    }
 
+    void HandleMovement() {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+        Vector2 movement = new Vector2(moveX, moveY).normalized * speed;
+        rigidBody.velocity = movement;
+
+        if (moveX != 0 || moveY != 0) {
+            animator.SetFloat("lastMoveX", moveX);
+            animator.SetFloat("lastMoveY", moveY);
+        }
+    }
+
+    void UpdateAnimatorParameters() {
         animator.SetFloat("moveX", rigidBody.velocity.x);
         animator.SetFloat("moveY", rigidBody.velocity.y);
-        
-        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
-        {
-            animator.SetFloat("lastMoveX", Input.GetAxisRaw("Horizontal"));
-            animator.SetFloat("lastMoveY", Input.GetAxisRaw("Vertical"));
+    }
+
+    void HandleAttack() {
+        if (isAttacking) {
+            attackCounter -= Time.deltaTime;
+            // rigidBody.velocity = Vector2.zero;
+        }
+
+        if (attackCounter <= 0) {
+            animator.SetBool("isAttacking", false);
+            isAttacking = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K)) {
+            attackCounter = attackTime;
+            animator.SetBool("isAttacking", true);
+            isAttacking = true;
         }
     }
 }
