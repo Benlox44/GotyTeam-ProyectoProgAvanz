@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 222544484}
   - component: {fileID: 222544483}
   - component: {fileID: 222544482}
+  - component: {fileID: 222544489}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Enemy
@@ -762,6 +763,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &222544489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222544481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bf18d3518c69243b3542e78fc9eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
 --- !u!1 &242190259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,10 +1613,10 @@ GameObject:
   - component: {fileID: 487367115}
   - component: {fileID: 487367114}
   - component: {fileID: 487367113}
-  - component: {fileID: 487367112}
   - component: {fileID: 487367117}
-  - component: {fileID: 487367118}
   - component: {fileID: 487367119}
+  - component: {fileID: 487367112}
+  - component: {fileID: 487367118}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1623,6 +1637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  attackCooldown: 1.5
 --- !u!50 &487367113
 Rigidbody2D:
   serializedVersion: 4
@@ -2013,6 +2028,7 @@ GameObject:
   - component: {fileID: 536963217}
   - component: {fileID: 536963216}
   - component: {fileID: 536963215}
+  - component: {fileID: 536963222}
   m_Layer: 0
   m_Name: Toad
   m_TagString: Enemy
@@ -2062,7 +2078,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10000
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -2210,6 +2226,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &536963222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536963214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bf18d3518c69243b3542e78fc9eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
 --- !u!1 &548285211
 GameObject:
   m_ObjectHideFlags: 0
@@ -28185,6 +28214,7 @@ GameObject:
   - component: {fileID: 653427874}
   - component: {fileID: 653427873}
   - component: {fileID: 653427872}
+  - component: {fileID: 653427879}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Enemy
@@ -28234,7 +28264,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10000
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -28382,6 +28412,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653427879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653427871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bf18d3518c69243b3542e78fc9eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 6
 --- !u!1 &661100578
 GameObject:
   m_ObjectHideFlags: 0
@@ -57465,6 +57508,7 @@ GameObject:
   - component: {fileID: 1450265500}
   - component: {fileID: 1450265506}
   - component: {fileID: 1450265505}
+  - component: {fileID: 1450265507}
   m_Layer: 0
   m_Name: Clown
   m_TagString: Enemy
@@ -57666,6 +57710,19 @@ MonoBehaviour:
   speed: 3
   maxRange: 5
   minRange: 0.7
+--- !u!114 &1450265507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450265498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bf18d3518c69243b3542e78fc9eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
 --- !u!1 &1487544073
 GameObject:
   m_ObjectHideFlags: 0
@@ -57765,6 +57822,7 @@ GameObject:
   - component: {fileID: 1494909770}
   - component: {fileID: 1494909769}
   - component: {fileID: 1494909768}
+  - component: {fileID: 1494909775}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Enemy
@@ -57962,6 +58020,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1494909775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494909767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bf18d3518c69243b3542e78fc9eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 6
 --- !u!1 &1502808483
 GameObject:
   m_ObjectHideFlags: 0
@@ -58307,6 +58378,7 @@ GameObject:
   - component: {fileID: 1703701708}
   - component: {fileID: 1703701709}
   - component: {fileID: 1703701710}
+  - component: {fileID: 1703701711}
   m_Layer: 0
   m_Name: Boar
   m_TagString: Enemy
@@ -58504,6 +58576,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageToGive: 1
   attackCooldown: 2
+--- !u!114 &1703701711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703701703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bf18d3518c69243b3542e78fc9eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
 --- !u!1 &1727305756
 GameObject:
   m_ObjectHideFlags: 0
@@ -81549,6 +81634,7 @@ GameObject:
   - component: {fileID: 1895915377}
   - component: {fileID: 1895915376}
   - component: {fileID: 1895915375}
+  - component: {fileID: 1895915382}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Enemy
@@ -81746,6 +81832,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895915382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895915374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37bf18d3518c69243b3542e78fc9eaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
 --- !u!1 &1938361478
 GameObject:
   m_ObjectHideFlags: 0
@@ -82188,7 +82287,7 @@ GameObject:
   - component: {fileID: 2030823552}
   m_Layer: 0
   m_Name: HitBox
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82265,6 +82364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b789f27495f96324c8fbfa7c1a718763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &2047217608
 GameObject:
   m_ObjectHideFlags: 0

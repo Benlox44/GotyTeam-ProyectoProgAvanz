@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour {
     private float attackCounter;
     private bool isAttacking;
 
+    [SerializeField] private float attackCooldown;
+    private float cooldownCounter;
+
     void Start() {
         attackTime = 0.5f;
         rigidBody = GetComponent<Rigidbody2D>();
@@ -49,10 +52,15 @@ public class PlayerController : MonoBehaviour {
             isAttacking = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.K)) {
+        if (cooldownCounter > 0) {
+            cooldownCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K) && cooldownCounter <= 0) {
             attackCounter = attackTime;
             animator.SetBool("isAttacking", true);
             isAttacking = true;
+            cooldownCounter = attackCooldown;
         }
     }
 }

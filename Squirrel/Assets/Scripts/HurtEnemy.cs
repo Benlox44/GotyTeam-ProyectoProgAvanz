@@ -1,20 +1,15 @@
 using UnityEngine;
 
 public class HurtEnemy : MonoBehaviour {
-
-
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    [SerializeField] private int damage;
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Enemy") Destroy(other.gameObject);
+        if (other.CompareTag("Enemy")) {
+            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+            if (enemyHealth != null) {
+                Vector2 knockbackDirection = other.transform.position - transform.position;
+                enemyHealth.TakeDamage(damage, knockbackDirection);
+            }
+        }
     }
 }
