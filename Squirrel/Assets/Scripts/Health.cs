@@ -44,6 +44,15 @@ public class Health : MonoBehaviour {
             playerMovement.enabled = false;
         }
     }
+    
+    public void HealPlayer(int healthToGive) {
+    numOfHearts += healthToGive;
+    if (numOfHearts > hearts.Length) {
+        numOfHearts = hearts.Length; 
+    }
+    UpdateHeartsDisplay();
+}
+
 
     private void Reload() {
         timeToLoad -= Time.deltaTime;

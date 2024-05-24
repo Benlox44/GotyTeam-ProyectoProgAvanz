@@ -11,6 +11,8 @@ public class EnemyHealth : MonoBehaviour {
     private SpriteRenderer enemySprite;
     private Rigidbody2D rb;
 
+    [SerializeField] private GameObject healthPickupPrefab;
+
     void Start() {
         currentHealth = maxHealth;
         flashLength = 0.5f;
@@ -36,8 +38,15 @@ public class EnemyHealth : MonoBehaviour {
     }
 
     private void Die() {
+        DropHealthItem();
         Destroy(gameObject);
     }
+
+    private void DropHealthItem() {
+    if (healthPickupPrefab != null) {
+        Instantiate(healthPickupPrefab, transform.position, Quaternion.identity);
+    }
+}
 
     private void FlashEffect() {
         float flashFrequency = 10f;
