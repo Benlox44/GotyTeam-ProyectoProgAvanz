@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour {
     private Animator myAnim;
     private Transform target;
+    private EnemyHealth enemyHealth; 
     [SerializeField] private Transform homePos;
     [SerializeField] private float speed;
     [SerializeField] private float maxRange;
@@ -11,9 +12,12 @@ public class EnemyController : MonoBehaviour {
     void Start() {
         myAnim = GetComponent<Animator>();
         target = FindObjectOfType<PlayerController>().transform;
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     void Update() {
+        if (enemyHealth != null && enemyHealth.isDead) return; 
+
         if (Vector3.Distance(target.position, transform.position) <= maxRange && Vector3.Distance(target.position, transform.position) >= minRange) {
             FollowPlayer();
         } else if (Vector3.Distance(target.position, transform.position) >= maxRange) {

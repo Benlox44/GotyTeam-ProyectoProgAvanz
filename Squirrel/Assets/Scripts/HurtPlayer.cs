@@ -5,6 +5,7 @@ public class HurtPlayer : MonoBehaviour {
     [SerializeField] private int damageToGive;
     [SerializeField] private float attackCooldown;
     private Animator animator;
+    private EnemyHealth enemyHealth; 
     private float attackTimer;
     private bool isTouching;
     private bool canAttack;
@@ -14,9 +15,12 @@ public class HurtPlayer : MonoBehaviour {
         canAttack = true;
         attackTimer = attackCooldown;
         animator = GetComponent<Animator>();
+        enemyHealth = GetComponent<EnemyHealth>(); 
     }
 
     void Update() {
+        if (enemyHealth != null && enemyHealth.isDead) return; 
+
         if (isTouching && canAttack) Attack();
 
         if (!canAttack) {
@@ -29,14 +33,20 @@ public class HurtPlayer : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        if (enemyHealth != null && enemyHealth.isDead) return; 
+
         if (other.collider.tag == "Player" && canAttack) Attack();
     }
 
     private void OnCollisionStay2D(Collision2D other) {
+        if (enemyHealth != null && enemyHealth.isDead) return; 
+
         if (other.collider.tag == "Player") isTouching = true;
     }
 
     private void OnCollisionExit2D(Collision2D other) {
+        if (enemyHealth != null && enemyHealth.isDead) return; 
+
         if (other.collider.tag == "Player") isTouching = false;
     }
 

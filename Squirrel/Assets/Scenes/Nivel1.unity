@@ -2172,6 +2172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  isBoss: 0
   healthPickupPrefab: {fileID: 674416331073499750, guid: ec2fd3173a648c245b3bfca6e3367d10, type: 3}
 --- !u!114 &226068102
 MonoBehaviour:
@@ -5091,6 +5092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+  isBoss: 0
   healthPickupPrefab: {fileID: 674416331073499750, guid: ec2fd3173a648c245b3bfca6e3367d10, type: 3}
 --- !u!1 &548285211
 GameObject:
@@ -35495,6 +35497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 6
+  isBoss: 0
   healthPickupPrefab: {fileID: 674416331073499750, guid: ec2fd3173a648c245b3bfca6e3367d10, type: 3}
 --- !u!1 &661100578
 GameObject:
@@ -75805,6 +75808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
+  isBoss: 1
   healthPickupPrefab: {fileID: 0}
 --- !u!213 &1470496853
 Sprite:
@@ -76458,6 +76462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 6
+  isBoss: 0
   healthPickupPrefab: {fileID: 674416331073499750, guid: ec2fd3173a648c245b3bfca6e3367d10, type: 3}
 --- !u!1 &1502808483
 GameObject:
@@ -77354,6 +77359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  isBoss: 0
   healthPickupPrefab: {fileID: 674416331073499750, guid: ec2fd3173a648c245b3bfca6e3367d10, type: 3}
 --- !u!114 &1645585199
 MonoBehaviour:
@@ -77998,6 +78004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
+  isBoss: 0
   healthPickupPrefab: {fileID: 674416331073499750, guid: ec2fd3173a648c245b3bfca6e3367d10, type: 3}
 --- !u!1 &1704972355
 GameObject:
@@ -89649,6 +89656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  isBoss: 0
   healthPickupPrefab: {fileID: 674416331073499750, guid: ec2fd3173a648c245b3bfca6e3367d10, type: 3}
 --- !u!114 &1816507004
 MonoBehaviour:
@@ -107070,6 +107078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  isBoss: 0
   healthPickupPrefab: {fileID: 674416331073499750, guid: ec2fd3173a648c245b3bfca6e3367d10, type: 3}
 --- !u!1 &1938361478
 GameObject:

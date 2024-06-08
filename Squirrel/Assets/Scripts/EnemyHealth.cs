@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
     [SerializeField] private int maxHealth = 100;
+    [SerializeField] private bool isBoss = false;
     private int currentHealth;
-
+    public bool isDead { get; private set; } 
     private bool flashActive;
     private float flashLength;
     private float flashCounter;
 
     private SpriteRenderer enemySprite;
     private Rigidbody2D rb;
+    private Animator animator;
 
     [SerializeField] private GameObject healthPickupPrefab;
 
@@ -18,14 +20,16 @@ public class EnemyHealth : MonoBehaviour {
         flashLength = 0.5f;
         enemySprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update() {
         if (flashActive) FlashEffect();
     }
 
-
     public void TakeDamage(int damage, Vector2 knockbackDirection) {
+        if (isDead) return; 
+
         flashActive = true;
         flashCounter = flashLength;
 
@@ -38,15 +42,26 @@ public class EnemyHealth : MonoBehaviour {
     }
 
     private void Die() {
+        isDead = true; 
+
+        if (isBoss) {
+            animator.SetTrigger("Die");
+        } else {
+            DropHealthItem();
+            Destroy(gameObject);
+        }
+    }
+
+    public void OnDeathAnimationEnd() {
         DropHealthItem();
         Destroy(gameObject);
     }
 
     private void DropHealthItem() {
-    if (healthPickupPrefab != null) {
-        Instantiate(healthPickupPrefab, transform.position, Quaternion.identity);
+        if (healthPickupPrefab != null) {
+            Instantiate(healthPickupPrefab, transform.position, Quaternion.identity);
+        }
     }
-}
 
     private void FlashEffect() {
         float flashFrequency = 10f;
