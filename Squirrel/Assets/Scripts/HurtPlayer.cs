@@ -9,9 +9,11 @@ public class HurtPlayer : MonoBehaviour {
     private float attackTimer;
     private bool isTouching;
     private bool canAttack;
+    private Transform playerTransform;
 
     void Start() {
         health = FindObjectOfType<Health>();
+        playerTransform = FindObjectOfType<PlayerController>().transform;
         canAttack = true;
         attackTimer = attackCooldown;
         animator = GetComponent<Animator>();
@@ -52,7 +54,30 @@ public class HurtPlayer : MonoBehaviour {
 
     private void Attack() {
         canAttack = false;
-        animator.SetTrigger("Attack");
+        SetAttackDirection();
         health.HurtPlayer(damageToGive);
+    }
+
+    private void SetAttackDirection() {
+        Vector2 attackDirection = GetAttackDirection();
+        
+        if (Mathf.Abs(attackDirection.x) > Mathf.Abs(attackDirection.y)) {
+            if (attackDirection.x > 0) {
+                animator.SetTrigger("AttackRight");
+            } else {
+                animator.SetTrigger("AttackLeft");
+            }
+        } else {
+            if (attackDirection.y > 0) {
+                animator.SetTrigger("AttackUp");
+            } else {
+                animator.SetTrigger("AttackDown");
+            }
+        }
+    }
+
+    private Vector2 GetAttackDirection() {
+        Vector2 direction = playerTransform.position - transform.position;
+        return direction.normalized;
     }
 }

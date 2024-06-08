@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour {
     [SerializeField] private bool isBoss = false;
     private int currentHealth;
     public bool isDead { get; private set; } 
+    private bool isLowHealth = false;
     private bool flashActive;
     private float flashLength;
     private float flashCounter;
@@ -25,8 +26,14 @@ public class EnemyHealth : MonoBehaviour {
 
     void Update() {
         if (flashActive) FlashEffect();
+        CheckHealth();
     }
-
+    private void CheckHealth() {
+        if (!isLowHealth && currentHealth <= maxHealth * 0.5f) {
+            isLowHealth = true;
+            animator.SetBool("isLowHealth", true); // Activar el segundo ataque en el Animator
+        }
+    }
     public void TakeDamage(int damage, Vector2 knockbackDirection) {
         if (isDead) return; 
 
