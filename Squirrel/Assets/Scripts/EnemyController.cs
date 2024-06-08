@@ -41,4 +41,9 @@ public class EnemyController : MonoBehaviour {
             myAnim.SetBool("isMoving", false);
         }
     }
+
+    public void IncreaseSpeed(float amount) {
+        speed += amount;
+    }
 }
+

@@ -80,4 +80,9 @@ public class HurtPlayer : MonoBehaviour {
         Vector2 direction = playerTransform.position - transform.position;
         return direction.normalized;
     }
+
+    public void IncreaseDamage(int multiplier) {
+        damageToGive += multiplier;
+    }
 }
+

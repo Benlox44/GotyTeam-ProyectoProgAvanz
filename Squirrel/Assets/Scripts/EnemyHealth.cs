@@ -3,9 +3,11 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private bool isBoss = false;
+    [SerializeField] private int damageMultiplier = 2; // Nuevo campo para el multiplicador de daño
+    [SerializeField] private float speedBoost = 1f; // Nuevo campo para el aumento de velocidad
     private int currentHealth;
     public bool isDead { get; private set; } 
-    private bool isLowHealth = false;
+    public bool isLowHealth { get; private set; } 
     private bool flashActive;
     private float flashLength;
     private float flashCounter;
@@ -13,6 +15,8 @@ public class EnemyHealth : MonoBehaviour {
     private SpriteRenderer enemySprite;
     private Rigidbody2D rb;
     private Animator animator;
+    private EnemyController enemyController; // Referencia al controlador del enemigo
+    private HurtPlayer hurtPlayer; // Referencia al script HurtPlayer
 
     [SerializeField] private GameObject healthPickupPrefab;
 
@@ -22,18 +26,28 @@ public class EnemyHealth : MonoBehaviour {
         enemySprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        enemyController = GetComponent<EnemyController>();
+        hurtPlayer = GetComponent<HurtPlayer>();
     }
 
     void Update() {
         if (flashActive) FlashEffect();
         CheckHealth();
     }
+
     private void CheckHealth() {
         if (!isLowHealth && currentHealth <= maxHealth * 0.5f) {
             isLowHealth = true;
-            animator.SetBool("isLowHealth", true); // Activar el segundo ataque en el Animator
+            animator.SetBool("isLowHealth", true);
+            if (enemyController != null) {
+                enemyController.IncreaseSpeed(speedBoost); // Aumentar la velocidad
+            }
+            if (hurtPlayer != null) {
+                hurtPlayer.IncreaseDamage(damageMultiplier); // Aumentar el daño
+            }
         }
     }
+
     public void TakeDamage(int damage, Vector2 knockbackDirection) {
         if (isDead) return; 
 
@@ -82,3 +96,4 @@ public class EnemyHealth : MonoBehaviour {
         }
     }
 }
+
