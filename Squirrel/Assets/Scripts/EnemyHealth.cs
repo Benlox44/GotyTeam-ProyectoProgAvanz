@@ -3,8 +3,8 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private bool isBoss = false;
-    [SerializeField] private int damageMultiplier = 2; // Nuevo campo para el multiplicador de daño
-    [SerializeField] private float speedBoost = 1f; // Nuevo campo para el aumento de velocidad
+    [SerializeField] private int damageMultiplier = 2; 
+    [SerializeField] private float speedBoost = 1f; 
     private int currentHealth;
     public bool isDead { get; private set; } 
     public bool isLowHealth { get; private set; } 
@@ -15,10 +15,12 @@ public class EnemyHealth : MonoBehaviour {
     private SpriteRenderer enemySprite;
     private Rigidbody2D rb;
     private Animator animator;
-    private EnemyController enemyController; // Referencia al controlador del enemigo
-    private HurtPlayer hurtPlayer; // Referencia al script HurtPlayer
+    private EnemyController enemyController; 
+    private HurtPlayer hurtPlayer; 
 
     [SerializeField] private GameObject healthPickupPrefab;
+
+    public static event System.Action OnBossDeath; 
 
     void Start() {
         currentHealth = maxHealth;
@@ -40,10 +42,10 @@ public class EnemyHealth : MonoBehaviour {
             isLowHealth = true;
             animator.SetBool("isLowHealth", true);
             if (enemyController != null) {
-                enemyController.IncreaseSpeed(speedBoost); // Aumentar la velocidad
+                enemyController.IncreaseSpeed(speedBoost); 
             }
             if (hurtPlayer != null) {
-                hurtPlayer.IncreaseDamage(damageMultiplier); // Aumentar el daño
+                hurtPlayer.IncreaseDamage(damageMultiplier); 
             }
         }
     }
@@ -67,6 +69,7 @@ public class EnemyHealth : MonoBehaviour {
 
         if (isBoss) {
             animator.SetTrigger("Die");
+            OnBossDeath?.Invoke(); 
         } else {
             DropHealthItem();
             Destroy(gameObject);
