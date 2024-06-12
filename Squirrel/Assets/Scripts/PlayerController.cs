@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour {
 
     private Item equippedItem;
 
+    [SerializeField] private AudioClip ataqueSonido;
+    [SerializeField] private AudioClip recoleccionSonido;
+    [SerializeField] private AudioClip danoSonido;
+    [SerializeField] private AudioClip movimientoSonido;
+
     void Start() {
         attackTime = 0.5f;
         rigidBody = GetComponent<Rigidbody2D>();
@@ -44,14 +49,15 @@ public class PlayerController : MonoBehaviour {
     }
 
     void HandleAttack() {
+        
         if (isAttacking) {
             attackCounter -= Time.deltaTime;
-            // rigidBody.velocity = Vector2.zero;
+            // rigidBody.velocity = Vector2.zero;   
         }
 
         if (attackCounter <= 0) {
             animator.SetBool("isAttacking", false);
-            isAttacking = false;
+            isAttacking = false;     
         }
 
         if (cooldownCounter > 0) {
@@ -59,6 +65,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.K) && cooldownCounter <= 0) {
+            ControladorSonido.Instance.EjecutarSonido(ataqueSonido);
             attackCounter = attackTime;
             animator.SetBool("isAttacking", true);
             isAttacking = true;
@@ -80,7 +87,6 @@ public class PlayerController : MonoBehaviour {
 
             foreach (Collider2D enemy in hitEnemies) {
                 if (enemy.CompareTag("Enemy")) {
-                    
                     Vector2 knockbackDirection = (enemy.transform.position - transform.position).normalized;
                     enemy.GetComponent<EnemyHealth>().TakeDamage(20,knockbackDirection); 
                     Debug.Log("Golpeando enemigo: " + enemy.name);
@@ -100,6 +106,7 @@ public class PlayerController : MonoBehaviour {
             if (newItem != null) {
                 CollectItem(newItem);
                 Destroy(collision.gameObject); 
+                ControladorSonido.Instance.EjecutarSonido(recoleccionSonido);
             }
         }
     }
