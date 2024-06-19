@@ -144,3 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthToGive: 1
+  cantidadPuntos: 100
+  puntajes: {fileID: 0}

@@ -5,6 +5,8 @@ using UnityEngine;
 public class HealthPickup : MonoBehaviour
 {
     [SerializeField] private int healthToGive;
+    [SerializeField] private float cantidadPuntos;
+    [SerializeField] private Puntajes puntajes;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
@@ -12,6 +14,8 @@ public class HealthPickup : MonoBehaviour
             if (playerHealth != null) {
                 playerHealth.HealPlayer(healthToGive);
                 Destroy(gameObject); 
+                puntajes.SumarPuntos(cantidadPuntos);
+                
             }
         }
     }
