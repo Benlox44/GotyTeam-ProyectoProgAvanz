@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
+    [SerializeField] private AudioMixer audioMixer;
+
     private bool juegoPausado = false;
     private void Update() 
     {
@@ -47,7 +50,11 @@ public class MenuPausa : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
+    public void CambiarVolumen(float volumen)
+   {
+    audioMixer.SetFloat("Volumen" , volumen);
 
+   }
     public void Cerrar()
     {
         Debug.Log("Cerrando juego");
