@@ -6,9 +6,6 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float spawnInterval = 3f;
-    [SerializeField] private int maxEnemies = 10;
-
-    private int currentEnemies = 0;
 
     void Start()
     {
@@ -17,16 +14,8 @@ public class EnemyGenerator : MonoBehaviour
 
     private IEnumerator GenerateEnemiesRoutine() {
         while (true) {
-            if (currentEnemies < maxEnemies)
-            {
-                Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
-                currentEnemies++;
-            }
             yield return new WaitForSeconds(spawnInterval);
+            Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
         }
-    }
-
-    public void EnemyDied() {
-        currentEnemies--;
     }
 }

@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37bf18d3518c69243b3542e78fc9eaad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 1
   isBoss: 0
   damageMultiplier: 0
   speedBoost: 0

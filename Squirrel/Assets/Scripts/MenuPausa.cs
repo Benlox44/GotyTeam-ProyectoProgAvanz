@@ -23,7 +23,6 @@ public class MenuPausa : MonoBehaviour
                 Pausa();
             }
         }
-
     }
 
     public void Pausa()
@@ -50,15 +49,15 @@ public class MenuPausa : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
+    
     public void CambiarVolumen(float volumen)
-   {
+    {
     audioMixer.SetFloat("Volumen" , volumen);
+    }
 
-   }
     public void Cerrar()
     {
         Debug.Log("Cerrando juego");
         Application.Quit();
     }
-
 }

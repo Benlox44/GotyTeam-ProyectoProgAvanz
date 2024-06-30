@@ -1,90 +1,77 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-// using UnityEngine.Networking;
+using System.Collections;
+using UnityEngine;
+using UnityEngine.Networking;
 
-// public class ScoreManager : MonoBehaviour
-// {
-//     private string baseUrl = "https://game.example.com/scores";
-//     private string token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNTE2MjM5MDIyfQ.L8i6g3PfcHlioHCCPURC9pmXT7gdJpx3kOoyAfNUwCc";
+public class ScoreManager : MonoBehaviour
+{
+    private string baseUrl = "https://ucn-game-server.martux.cl/scores";
+    private string authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ZjE2Yzg3My00MDk5LTQzZjQtOTFkZC1iMTU2OTcxMDUzNDUiLCJrZXkiOiJWclNqdFEwam1uWXlQTFNYbm1mbXg1SldSIiwiaWF0IjoxNzE5NDYxNTMzLCJleHAiOjE3NTA5OTc1MzN9.m1SY77_IueP2TVDqVyuGFQW4z0XmqhAMlEbOjqa6v0U";
 
-//     // Método para obtener los puntajes
-//     public void GetScores()
-//     {
-//         StartCoroutine(GetScoresCoroutine());
-//     }
+    public IEnumerator GetScores(System.Action<string> callback)
+    {
+        string url = baseUrl;
 
-//     private IEnumerator GetScoresCoroutine()
-//     {
-//         UnityWebRequest www = UnityWebRequest.Get(baseUrl);
-//         www.SetRequestHeader("Authorization", "Bearer " + token);
-//         yield return www.SendWebRequest();
+        using (UnityWebRequest www = UnityWebRequest.Get(url))
+        {
+            www.SetRequestHeader("Authorization", "Bearer " + authToken);
 
-//         if (www.result == UnityWebRequest.Result.Success)
-//         {
-//             Debug.Log(www.downloadHandler.text);
-//             // Procesa la respuesta JSON aquí
-//         }
-//         else
-//         {
-//             Debug.LogError(www.error);
-//         }
-//     }
+            yield return www.SendWebRequest();
 
-//     // Método para agregar un nuevo puntaje
-//     public void AddScore(string playerName, int score)
-//     {
-//         StartCoroutine(AddScoreCoroutine(playerName, score));
-//     }
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Error al obtener puntajes: " + www.error);
+            }
+            else
+            {
+                callback?.Invoke(www.downloadHandler.text);
+            }
+        }
+    }
 
-//     private IEnumerator AddScoreCoroutine(string playerName, int score)
-//     {
-//         var jsonData = new Dictionary<string, object>
-//         {
-//             { "playerName", playerName },
-//             { "score", score }
-//         };
+    public IEnumerator AddScore(string playerName, int score, System.Action<string> callback)
+    {
+        string url = baseUrl;
+        string jsonBody = "{\"playerName\": \"" + playerName + "\", \"score\": " + score + "}";
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
 
-//         string json = JsonUtility.ToJson(jsonData);
+        using (UnityWebRequest www = new UnityWebRequest(url, "POST"))
+        {
+            www.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            www.downloadHandler = new DownloadHandlerBuffer();
+            www.SetRequestHeader("Authorization", "Bearer " + authToken);
+            www.SetRequestHeader("Content-Type", "application/json");
 
-//         UnityWebRequest www = UnityWebRequest.Post(baseUrl, json);
-//         www.SetRequestHeader("Authorization", "Bearer " + token);
-//         www.SetRequestHeader("Content-Type", "application/json");
-//         www.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
-//         www.downloadHandler = new DownloadHandlerBuffer();
-        
-//         yield return www.SendWebRequest();
+            yield return www.SendWebRequest();
 
-//         if (www.result == UnityWebRequest.Result.Success)
-//         {
-//             Debug.Log(www.downloadHandler.text);
-//             // Procesa la respuesta JSON aquí
-//         }
-//         else
-//         {
-//             Debug.LogError(www.error);
-//         }
-//     }
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Error al agregar puntaje: " + www.error);
+            }
+            else
+            {
+                callback?.Invoke(www.downloadHandler.text);
+            }
+        }
+    }
 
-//     // Método para eliminar todos los puntajes
-//     public void DeleteScores()
-//     {
-//         StartCoroutine(DeleteScoresCoroutine());
-//     }
+    public IEnumerator DeleteAllScores(System.Action<string> callback)
+    {
+        string url = baseUrl;
 
-//     private IEnumerator DeleteScoresCoroutine()
-//     {
-//         UnityWebRequest www = UnityWebRequest.Delete(baseUrl);
-//         www.SetRequestHeader("Authorization", "Bearer " + token);
-//         yield return www.SendWebRequest();
+        using (UnityWebRequest www = UnityWebRequest.Delete(url))
+        {
+            www.SetRequestHeader("Authorization", "Bearer " + authToken);
 
-//         if (www.result == UnityWebRequest.Result.Success)
-//         {
-//             Debug.Log(www.downloadHandler.text);
-//         }
-//         else
-//         {
-//             Debug.LogError(www.error);
-//         }
-//     }
-// }
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Error al eliminar puntajes: " + www.error);
+            }
+            else
+            {
+                callback?.Invoke(www.downloadHandler.text);
+            }
+        }
+    }
+}
