@@ -19,6 +19,7 @@ public class EnemyHealth : MonoBehaviour {
     private HurtPlayer hurtPlayer; 
 
     [SerializeField] private GameObject healthPickupPrefab;
+    [SerializeField] private GameObject scorePickupPrefab; // Nuevo campo para el prefab de puntos
 
     public static event System.Action OnBossDeath; 
 
@@ -71,19 +72,22 @@ public class EnemyHealth : MonoBehaviour {
             animator.SetTrigger("Die");
             OnBossDeath?.Invoke(); 
         } else {
-            DropHealthItem();
+            DropItems();
             Destroy(gameObject);
         }
     }
 
     public void OnDeathAnimationEnd() {
-        DropHealthItem();
+        DropItems();
         Destroy(gameObject);
     }
 
-    private void DropHealthItem() {
+    private void DropItems() {
         if (healthPickupPrefab != null) {
             Instantiate(healthPickupPrefab, transform.position, Quaternion.identity);
+        }
+        if (scorePickupPrefab != null) {
+            Instantiate(scorePickupPrefab, transform.position, Quaternion.identity);
         }
     }
 
@@ -99,4 +103,3 @@ public class EnemyHealth : MonoBehaviour {
         }
     }
 }
-
