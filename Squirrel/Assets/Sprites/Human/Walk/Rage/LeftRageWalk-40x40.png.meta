@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740f2a954a48e0e49882757493be5bd2
-      internalID: 380870987
+      spriteID: 234368f5ceac66d4095e782e361ca2ea
+      internalID: 712146885
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 490a9c4c4618cc54da74cdeb89feea48
-      internalID: -757462415
+      spriteID: f2a8a13d735dfcf408e76358845a4073
+      internalID: 1026617148
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 439f311650ce0c840a5483876402029a
-      internalID: 1468920687
+      spriteID: d18762e78dff4254887bddae0596843f
+      internalID: -409065039
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LeftRageWalk-40x40_0: 380870987
-      LeftRageWalk-40x40_1: -757462415
-      LeftRageWalk-40x40_2: 1468920687
+      LeftRageWalk-40x40_0: 712146885
+      LeftRageWalk-40x40_1: 1026617148
+      LeftRageWalk-40x40_2: -409065039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7d7b548847b53e40a57d131b9cbc122
-      internalID: -1757231585
+      spriteID: a801536447eb4d44893b07ec60d87592
+      internalID: -1040688600
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f51a9f8371962040b7fe8ded359c971
-      internalID: -1241338386
+      spriteID: 2968334221a3eb240b38e9113b9d18a2
+      internalID: 870477371
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dcc49b295d6cd748a1b700064464632
-      internalID: 1753378139
+      spriteID: ba0bc1b12fdc89444b7450725e3914f5
+      internalID: 1509015244
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 625ed66a3fe915f44bff47ae6a8cb96f
-      internalID: -1312921137
+      spriteID: a17e7b333a85e644ab0b4c38ed0e16b4
+      internalID: 758750725
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DownRageAttack-40x40_0: -1757231585
-      DownRageAttack-40x40_1: -1241338386
-      DownRageAttack-40x40_2: 1753378139
-      DownRageAttack-40x40_3: -1312921137
+      DownRageAttack-40x40_0: -1040688600
+      DownRageAttack-40x40_1: 870477371
+      DownRageAttack-40x40_2: 1509015244
+      DownRageAttack-40x40_3: 758750725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
