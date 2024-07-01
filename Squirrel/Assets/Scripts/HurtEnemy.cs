@@ -9,6 +9,12 @@ public class HurtEnemy : MonoBehaviour {
             if (enemyHealth != null) {
                 Vector2 knockbackDirection = other.transform.position - transform.position;
                 enemyHealth.TakeDamage(damage, knockbackDirection);
+            } else {
+                HumanHealth HH = other.GetComponent<HumanHealth>();
+                if (HH != null) {
+                    Vector2 knockbackDirection = other.transform.position - transform.position;
+                    HH.TakeDamage(damage, knockbackDirection);
+                }
             }
         }
     }
