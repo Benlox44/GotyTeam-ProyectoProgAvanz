@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -21,5 +19,10 @@ public class Score : MonoBehaviour
     public void SumarPuntos(float puntosEntrada)
     {
         puntos += puntosEntrada;
+    }
+
+    public float GetPuntos()
+    {
+        return puntos;
     }
 }
