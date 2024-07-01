@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c2734c5f3f3a94d45897aea4ea25e496
+guid: 086cfc7b69f68f64f9b132bf81c1a90b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ActivateRage_0
+      name: Death_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58f8c56e448d82e4b874a0881c907a6a
-      internalID: -1429522429
+      spriteID: 6c26edae311950e4597157c7db1e8601
+      internalID: -1556550719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_1
+      name: Death_1
       rect:
         serializedVersion: 2
         x: 40
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c80fac0141cbf449a404a84ce4556c1
-      internalID: -117985261
+      spriteID: e43d3a67ecff885468a0aa85da5d5120
+      internalID: -417474453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_2
+      name: Death_2
       rect:
         serializedVersion: 2
         x: 80
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4087018883e5c14a95897fcfb3df243
-      internalID: -1085846098
+      spriteID: 854db64cee19b754ea95dfae66632b46
+      internalID: 1414910998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_3
+      name: Death_3
       rect:
         serializedVersion: 2
         x: 120
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80961926719ef7340948d9f711ab0760
-      internalID: 2099616662
+      spriteID: 062864abb4d153848997f5ed8a7f8d33
+      internalID: -1207838877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_4
+      name: Death_4
       rect:
         serializedVersion: 2
         x: 160
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 116b56ded6cc6714f93f4dcd8b92227d
-      internalID: 1586504219
+      spriteID: f5c126c8df108c64095345810de9934a
+      internalID: -1837636514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_5
+      name: Death_5
       rect:
         serializedVersion: 2
         x: 200
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e03580f58db74a846b64785ff3e10ee7
-      internalID: -140355937
+      spriteID: 0f2b8d7ffffd3004b96fbba129118945
+      internalID: -525520342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_6
+      name: Death_6
       rect:
         serializedVersion: 2
         x: 240
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e40c24ff73bf56f40bf50edb1c50d542
-      internalID: 374764696
+      spriteID: 8895ac9363a195b4fba3327eb84ab7e7
+      internalID: -2022906450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_7
+      name: Death_7
       rect:
         serializedVersion: 2
         x: 280
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91fe591570df7d34da8413df35a28da8
-      internalID: -2103944488
+      spriteID: 44b3c2fa65b22ef47acfe97163a41156
+      internalID: -1304580657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_8
+      name: Death_8
       rect:
         serializedVersion: 2
         x: 320
@@ -292,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1217e734f1414734b873deea2ed22817
-      internalID: 1361343087
+      spriteID: b2233548af03cca4389d339c72ce705b
+      internalID: 1288892685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_9
+      name: Death_9
       rect:
         serializedVersion: 2
         x: 360
@@ -313,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f96cdf344095a504994b169288469bdb
-      internalID: -975348862
+      spriteID: c7d714bce84ac59438f30f666202a346
+      internalID: 1233656867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_10
+      name: Death_10
       rect:
         serializedVersion: 2
         x: 400
@@ -334,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcb9def24bbda5d4ca84923795e23a20
-      internalID: 242794568
+      spriteID: 24d9c670843a2a240af33833377b52b6
+      internalID: -225485391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_11
+      name: Death_11
       rect:
         serializedVersion: 2
         x: 440
@@ -355,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2cef5c7e70c7f1478624b723ff9601b
-      internalID: -2002941622
+      spriteID: 146c155001c78d147b37ac5b8e545d6d
+      internalID: 1654869342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_12
+      name: Death_12
       rect:
         serializedVersion: 2
         x: 480
@@ -376,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1751d1226a962042a297dc1bdd908fc
-      internalID: 2021249352
+      spriteID: 91b15566ed012bc47b859aa13bd827e3
+      internalID: 643405563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_13
+      name: Death_13
       rect:
         serializedVersion: 2
         x: 520
@@ -397,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b1ca653da868bd41abcb562f9c04350
-      internalID: 1807522573
+      spriteID: ff2491c870f25004680e22f56ee7153c
+      internalID: 88888860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_14
+      name: Death_14
       rect:
         serializedVersion: 2
         x: 560
@@ -418,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03afc776f5610554786ec413a1d41128
-      internalID: -1671972338
+      spriteID: d7fed53d7a9a86148887f512eb77a5c3
+      internalID: 956908200
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_15
+      name: Death_15
       rect:
         serializedVersion: 2
         x: 600
@@ -439,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b35c05b778fe8a40908d3ab994c29f6
-      internalID: 1339487787
+      spriteID: 5ee3d30a6de957a408c7b9adf9bab266
+      internalID: -1208574448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_16
+      name: Death_16
       rect:
         serializedVersion: 2
         x: 640
@@ -460,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62239536f19ce7a47be7f673b787c11a
-      internalID: 77404153
+      spriteID: 9fc6939ed8bad1f4195d5a05efec039c
+      internalID: 445507643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_17
+      name: Death_17
       rect:
         serializedVersion: 2
         x: 680
@@ -481,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 771912c9bb57724489a3fa423eea522a
-      internalID: -434759381
+      spriteID: 9db358c43af2aff4cbd40b7183124a86
+      internalID: 991939346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_18
+      name: Death_18
       rect:
         serializedVersion: 2
         x: 720
@@ -502,14 +502,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c284f72b57136a4e93c5b52e8f283e5
-      internalID: -1152411932
+      spriteID: 3b8de146b02117d4bb1c7a7c6a1ef963
+      internalID: 140437069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_19
+      name: Death_19
       rect:
         serializedVersion: 2
         x: 760
@@ -523,14 +523,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd787d062a4c3c14da3cfdde4a3ed668
-      internalID: 1169691648
+      spriteID: beda1393c72ed5149b3ae18251a8836d
+      internalID: 1891558499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_20
+      name: Death_20
       rect:
         serializedVersion: 2
         x: 800
@@ -544,14 +544,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afaeba6410e6cd248ba155b75c2d5d67
-      internalID: -1884439514
+      spriteID: 1792cef9e147ebb43b37babc7b59efb3
+      internalID: -2144313645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_21
+      name: Death_21
       rect:
         serializedVersion: 2
         x: 840
@@ -565,14 +565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b88f38c32164c954ab883f1b6bbe3155
-      internalID: 1858061777
+      spriteID: 185ab8c58c4a7e244a6f0f983c014216
+      internalID: -1703418462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ActivateRage_22
+      name: Death_22
       rect:
         serializedVersion: 2
         x: 880
@@ -586,8 +586,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ceaef19d10fd2b44bf7be7c1fc1cb63
-      internalID: 61286320
+      spriteID: 53b5bee83d461ce41820a98adb893a5d
+      internalID: -1464691070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_23
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7442e2532f1fe54ea2a28e9fa2791a3
+      internalID: 1644924166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_24
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5479e4ad8957440999ec47f3d93959
+      internalID: -135998130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_25
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15fc17eb27a449b4abe9b1fc0e61e713
+      internalID: -1671274971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_26
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002e83d6349161047bde095f89708c60
+      internalID: -1361959800
       vertices: []
       indices: 
       edges: []
@@ -603,29 +687,33 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ActivateRage_0: -1429522429
-      ActivateRage_1: -117985261
-      ActivateRage_10: 242794568
-      ActivateRage_11: -2002941622
-      ActivateRage_12: 2021249352
-      ActivateRage_13: 1807522573
-      ActivateRage_14: -1671972338
-      ActivateRage_15: 1339487787
-      ActivateRage_16: 77404153
-      ActivateRage_17: -434759381
-      ActivateRage_18: -1152411932
-      ActivateRage_19: 1169691648
-      ActivateRage_2: -1085846098
-      ActivateRage_20: -1884439514
-      ActivateRage_21: 1858061777
-      ActivateRage_22: 61286320
-      ActivateRage_3: 2099616662
-      ActivateRage_4: 1586504219
-      ActivateRage_5: -140355937
-      ActivateRage_6: 374764696
-      ActivateRage_7: -2103944488
-      ActivateRage_8: 1361343087
-      ActivateRage_9: -975348862
+      Death_0: -1556550719
+      Death_1: -417474453
+      Death_10: -225485391
+      Death_11: 1654869342
+      Death_12: 643405563
+      Death_13: 88888860
+      Death_14: 956908200
+      Death_15: -1208574448
+      Death_16: 445507643
+      Death_17: 991939346
+      Death_18: 140437069
+      Death_19: 1891558499
+      Death_2: 1414910998
+      Death_20: -2144313645
+      Death_21: -1703418462
+      Death_22: -1464691070
+      Death_23: 1644924166
+      Death_24: -135998130
+      Death_25: -1671274971
+      Death_26: -1361959800
+      Death_3: -1207838877
+      Death_4: -1837636514
+      Death_5: -525520342
+      Death_6: -2022906450
+      Death_7: -1304580657
+      Death_8: 1288892685
+      Death_9: 1233656867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
