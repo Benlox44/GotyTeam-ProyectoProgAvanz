@@ -17,11 +17,11 @@ public class UIManager : MonoBehaviour
         endGameUI.SetActive(false); 
         submitButton.onClick.AddListener(SubmitScore); 
         playerNameInput.onEndEdit.AddListener(SubmitScoreOnEnter);
-        StartCoroutine(FindObjectOfType<ScoreManager>().DeleteAllScores(response =>
-        {
-            // Manejar la respuesta aquí
-            Debug.Log("Respuesta de eliminación de puntajes: " + response);
-        }));
+        // StartCoroutine(FindObjectOfType<ScoreManager>().DeleteAllScores(response =>
+        // {
+        //     // Manejar la respuesta aquí
+        //     Debug.Log("Respuesta de eliminación de puntajes: " + response);
+        // }));
         StartCoroutine(FindObjectOfType<ScoreManager>().GetScores(DisplayScores));
     }
 
