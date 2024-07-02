@@ -2028,7 +2028,6 @@ MonoBehaviour:
   numOfHearts: 5
   timeToLoad: 5
   isCompetitiveMap: 0
-  gameTime: 60
   hearts:
   - {fileID: 1122936376}
   - {fileID: 1649153469}
@@ -36558,7 +36557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e4ea48fca02134ab543c001b57e906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Menu inicial
+  sceneName: Nivel 2
 --- !u!61 &739536321
 BoxCollider2D:
   m_ObjectHideFlags: 0
