@@ -6,9 +6,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int numOfHearts;
     [SerializeField] private float timeToLoad;
-    [SerializeField] private bool isCompetitiveMap = false;
-    [SerializeField] private float gameTime = 60.0f;
-    private float timer;
+    [SerializeField] private bool isCompetitiveMap;
     private bool isDead;
 
     [SerializeField] private Image[] hearts;
@@ -32,34 +30,23 @@ public class Health : MonoBehaviour
         animator = GetComponent<Animator>();
         playerSprite = GetComponent<SpriteRenderer>();
         playerMovement = GetComponent<PlayerController>();
-
-        if (isCompetitiveMap)
-        {
-            timer = gameTime; 
-        }
-
-        // Asegurarse de que el UIManager está asignado correctamente
         uiManager = FindObjectOfType<UIManager>();
-        if (uiManager == null)
-        {
-            Debug.LogError("UIManager no encontrado en la escena.");
-        }
     }
 
     void Update()
     {
         UpdateHeartsDisplay();
-        if (isDead) Reload();
-        if (flashActive) FlashEffect();
-
-        if (isCompetitiveMap && timer > 0)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                EndGame();
+        if (isDead) {
+            if (isCompetitiveMap) {
+                timeToLoad -= Time.deltaTime;
+                if (timeToLoad <= 0) {
+                    uiManager.ShowEndGameUI();
+                }
+            } else {
+                Reload();
             }
         }
+        if (flashActive) FlashEffect();
     }
 
     public void HurtPlayer(int damageToGive)
@@ -73,7 +60,6 @@ public class Health : MonoBehaviour
             isDead = true;
             animator.SetTrigger("Die");
             playerMovement.enabled = false;
-            EndGame(); // Llamar a EndGame cuando el jugador muere
         }
     }
     
@@ -111,12 +97,5 @@ public class Health : MonoBehaviour
             playerSprite.color = new Color(1f, 1f, 1f, 1f);
             flashActive = false;
         }
-    }
-
-    private void EndGame()
-    {   
-        FindObjectOfType<UIManager>().ShowEndGameUI();
-        Time.timeScale = 0;
-        
     }
 }

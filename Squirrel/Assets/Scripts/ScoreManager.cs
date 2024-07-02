@@ -66,6 +66,25 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    public IEnumerator DeleteAllScores(Action<string> callback)
+    {
+        UnityWebRequest www = UnityWebRequest.Delete(apiUrl);
+        www.SetRequestHeader("Authorization", "Bearer " + token);
+
+        yield return www.SendWebRequest();
+
+        if (www.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Todos los puntajes han sido eliminados correctamente.");
+            callback("Success");
+        }
+        else
+        {
+            Debug.Log("Error al eliminar puntajes: " + www.error);
+            callback("Error: " + www.error);
+        }
+    }
+
     private List<ScoreData> ProcessScores(string json)
     {
         ScoreList scoreList = JsonUtility.FromJson<ScoreList>(json);

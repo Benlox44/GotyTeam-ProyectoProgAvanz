@@ -17,6 +17,12 @@ public class UIManager : MonoBehaviour
         endGameUI.SetActive(false); 
         submitButton.onClick.AddListener(SubmitScore); 
         playerNameInput.onEndEdit.AddListener(SubmitScoreOnEnter);
+        StartCoroutine(FindObjectOfType<ScoreManager>().DeleteAllScores(response =>
+        {
+            // Manejar la respuesta aquí
+            Debug.Log("Respuesta de eliminación de puntajes: " + response);
+        }));
+        StartCoroutine(FindObjectOfType<ScoreManager>().GetScores(DisplayScores));
     }
 
     
@@ -72,13 +78,17 @@ public class UIManager : MonoBehaviour
     private void DisplayScores(List<ScoreData> scores)
     {
         if (scores != null)
+    {
+        scoresText.text = "Top 10 Puntajes:\n";
+        
+        // Limitar la cantidad de puntajes mostrados a los primeros 10
+        int count = Mathf.Min(scores.Count, 10);
+        
+        for (int i = 0; i < count; i++)
         {
-            scoresText.text = "Puntajes:\n";
-            foreach (var score in scores)
-            {
-                scoresText.text += $"{score.playerName}: {score.score}\n";
-            }
+            scoresText.text += $"{scores[i].playerName}: {scores[i].score}\n";
         }
+    }
         else
         {
             scoresText.text = "Error al obtener los puntajes.";
