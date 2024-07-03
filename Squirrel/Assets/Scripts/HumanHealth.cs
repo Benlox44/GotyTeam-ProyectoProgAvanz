@@ -16,7 +16,7 @@ public class HumanHealth : MonoBehaviour {
     private Rigidbody2D rb;
     private Animator animator;
     private HumanController enemyController; 
-    private HurtPlayer hurtPlayer; 
+    private HumanHurtPlayer hurtPlayer; 
 
     [SerializeField] private GameObject healthPickupPrefab;
     [SerializeField] private GameObject scorePickupPrefab; 
@@ -31,7 +31,7 @@ public class HumanHealth : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         enemyController = GetComponent<HumanController>();
-        hurtPlayer = GetComponent<HurtPlayer>();
+        hurtPlayer = GetComponent<HumanHurtPlayer>();
     }
 
     void Update() {
