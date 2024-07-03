@@ -57,7 +57,10 @@ public class MenuPausa : MonoBehaviour
 
     public void Cerrar()
     {
-        Debug.Log("Cerrando juego");
-        Application.Quit();
+         SceneManager.LoadScene(0);
+         juegoPausado = false;
+        Time.timeScale = 1f;
+        botonPausa.SetActive(true);
+        menuPausa.SetActive(false);
     }
 }
