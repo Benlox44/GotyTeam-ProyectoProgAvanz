@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HumanHealth : MonoBehaviour {
     [SerializeField] private int maxHealth = 100;
@@ -81,6 +82,7 @@ public class HumanHealth : MonoBehaviour {
 
     public void OnDeathAnimationEnd() {
         DropItems();
+        SceneManager.LoadScene("Menu inicial");
         Destroy(gameObject);
     }
 
