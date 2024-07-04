@@ -19,25 +19,28 @@ public class UIManager : MonoBehaviour
     {
         endGameUI.SetActive(false); 
 
-        if (wantDelete) {
-        StartCoroutine(FindObjectOfType<ScoreManager>().DeleteAllScores(response =>
+        if (wantDelete) 
         {
-            // Manejar la respuesta aquí
-            Debug.Log("Respuesta de eliminación de puntajes: " + response);
-        }));
+            StartCoroutine(FindObjectOfType<ScoreManager>().DeleteAllScores(response =>
+            {
+                // Manejar la respuesta aquí
+                Debug.Log("Respuesta de eliminación de puntajes: " + response);
+            }));   
+        }
+        if (wantShow) 
+        {
+            StartCoroutine(FindObjectOfType<ScoreManager>().GetScores(DisplayScores));
         }
     }
 
-    
     public void ShowEndGameUI()
     {
         Debug.Log("Mostrando UI de fin de juego");
         endGameUI.SetActive(true); 
+        StartCoroutine(FindObjectOfType<ScoreManager>().GetScores(DisplayScores));
         Time.timeScale = 0; 
-        if (wantShow) StartCoroutine(FindObjectOfType<ScoreManager>().GetScores(DisplayScores));
     }
 
-    
     public void SubmitScore()
     {
         string playerName = playerNameInput.text;
@@ -55,7 +58,6 @@ public class UIManager : MonoBehaviour
             endGameUI.SetActive(false); 
             EndGame(); 
 
-            
             StartCoroutine(FindObjectOfType<ScoreManager>().GetScores(DisplayScores));
         }));
     }
@@ -65,35 +67,39 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             SubmitScore();
-
         }
     }
 
-    
     private void EndGame()
     {
         Debug.Log("Finalizando el juego");
         SceneManager.LoadScene("Menu inicial");
     }
 
-    
     private void DisplayScores(List<ScoreData> scores)
     {
+        Debug.Log("DisplayScores called."); // Registro para saber que el método fue llamado
+
         if (scores != null)
-    {
-        scoresText.text = "TOP 10 PUNTAJES:\n";
-        
-        // Limitar la cantidad de puntajes mostrados a los primeros 10
-        int count = Mathf.Min(scores.Count, 10);
-        
-        for (int i = 0; i < count; i++)
         {
-            scoresText.text += $"{scores[i].playerName}: {scores[i].score}\n";
+            Debug.Log("Scores list is not null. Count: " + scores.Count); // Registro de la cantidad de puntajes recibidos
+            scoresText.text = "TOP 10 PUNTAJES:\n";
+            
+            // Limitar la cantidad de puntajes mostrados a los primeros 10
+            int count = Mathf.Min(scores.Count, 10);
+
+            for (int i = 0; i < count; i++)
+            {
+                scoresText.text += $"{scores[i].playerName}: {scores[i].score}\n";
+                Debug.Log($"Displaying score {i + 1}: {scores[i].playerName} - {scores[i].score}"); // Registro de cada puntaje mostrado
+            }
         }
-    }
         else
         {
+            Debug.LogError("Scores list is null or empty."); // Registro de error si la lista de puntajes es nula
             scoresText.text = "Error al obtener los puntajes.";
         }
+
+        Debug.Log("Scores text updated: " + scoresText.text); // Registro para verificar la actualización del texto
     }
 }
