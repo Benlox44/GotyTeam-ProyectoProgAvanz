@@ -100,10 +100,10 @@ TextureImporter:
       name: rat_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 9
         y: 96
-        width: 32
-        height: 32
+        width: 13
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b89db16375a34a48abeb8898fea2c65
-      internalID: -176685006
+      spriteID: 58edbba1639320349adb643527a58de9
+      internalID: -642049336
       vertices: []
       indices: 
       edges: []
@@ -121,10 +121,10 @@ TextureImporter:
       name: rat_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 42
         y: 96
-        width: 32
-        height: 32
+        width: 14
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1534340ed5c20b7499e9714998438242
-      internalID: -1460192884
+      spriteID: 0be25e651a5653846b7e2c15c574e324
+      internalID: -1615073549
       vertices: []
       indices: 
       edges: []
@@ -142,10 +142,10 @@ TextureImporter:
       name: rat_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 74
         y: 96
-        width: 32
-        height: 32
+        width: 13
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7b003864e358954e93935cc790ec9ea
-      internalID: -1752814377
+      spriteID: 51e0b80ef62406849ad5de77401c6eba
+      internalID: 870075271
       vertices: []
       indices: 
       edges: []
@@ -163,10 +163,10 @@ TextureImporter:
       name: rat_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
+        x: 0
+        y: 64
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50eb1b2879a47c54c813093dcfe7f670
-      internalID: 808877142
+      spriteID: 467bc4362463ad94f9975997adbee4ed
+      internalID: 1081658519
       vertices: []
       indices: 
       edges: []
@@ -184,10 +184,10 @@ TextureImporter:
       name: rat_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 34
+        y: 65
+        width: 29
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea5c80aa986a90549bdecb8c8e7a5f64
-      internalID: -841429238
+      spriteID: 4733691ca2cc7ad4a8d51331b3125f40
+      internalID: -899139593
       vertices: []
       indices: 
       edges: []
@@ -205,10 +205,10 @@ TextureImporter:
       name: rat_5
       rect:
         serializedVersion: 2
-        x: 32
+        x: 65
         y: 64
-        width: 32
-        height: 32
+        width: 29
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d01f529eb5274f4cba2bda8200f4884
-      internalID: 238954379
+      spriteID: b7b216bf0cb1dc9418e8a51f0419a7e8
+      internalID: 46275978
       vertices: []
       indices: 
       edges: []
@@ -226,10 +226,10 @@ TextureImporter:
       name: rat_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 8
+        y: 35
+        width: 14
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,8 +237,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33774d62b9fc8a6428f1727f8838a9fc
-      internalID: 940238222
+      spriteID: c1657a7bf7d56aa40872a2317f09a5e3
+      internalID: 234495484
       vertices: []
       indices: 
       edges: []
@@ -247,10 +247,10 @@ TextureImporter:
       name: rat_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
+        x: 42
+        y: 34
+        width: 14
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 759be96c87f4e684c9c7ac7f0836f4b4
-      internalID: 954931055
+      spriteID: df8bb7a49ec874740a7ccf796fe2669a
+      internalID: -1692080666
       vertices: []
       indices: 
       edges: []
@@ -268,10 +268,10 @@ TextureImporter:
       name: rat_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 74
+        y: 35
+        width: 14
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26b27ed71cd2e3c438e6472a8c74baff
-      internalID: -452453116
+      spriteID: aa7ba2fbe5cd6bf4ea0a2782784728df
+      internalID: 706344829
       vertices: []
       indices: 
       edges: []
@@ -289,10 +289,10 @@ TextureImporter:
       name: rat_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 2
+        y: 0
+        width: 29
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b161f0b1cb041f47b9034e2a0f43758
-      internalID: 2099732085
+      spriteID: dd6c64d7f9f437143b8864d1feeba419
+      internalID: 603014102
       vertices: []
       indices: 
       edges: []
@@ -310,10 +310,10 @@ TextureImporter:
       name: rat_10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 33
+        y: 1
+        width: 29
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,8 +321,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77516b6442a19424fbc5edbeb566ea2f
-      internalID: -99401353
+      spriteID: f6380f6cb02523a41a5d3ec078f1361c
+      internalID: -1331752046
       vertices: []
       indices: 
       edges: []
@@ -331,31 +331,10 @@ TextureImporter:
       name: rat_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1b8d1af7b8811543a24f967a472c0c0
-      internalID: -535647935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rat_12
-      rect:
-        serializedVersion: 2
-        x: 0
+        x: 66
         y: 0
-        width: 32
-        height: 32
+        width: 30
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,71 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dedfd9b3205e6384c9132a4c553ce7a2
-      internalID: 49690914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rat_13
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e494dfb8661d0e64eba20a4120920e2b
-      internalID: 453629716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rat_14
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cd2f1c237fd08a4ab62eac4a6affc82
-      internalID: -1034718816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rat_15
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb75bdc3ce0539b49b871f53cd6a56e5
-      internalID: -807174301
+      spriteID: d05ab141824c4164e834275ada29d68f
+      internalID: -1728737526
       vertices: []
       indices: 
       edges: []
@@ -443,22 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rat_0: -176685006
-      rat_1: -1460192884
-      rat_10: -99401353
-      rat_11: -535647935
-      rat_12: 49690914
-      rat_13: 453629716
-      rat_14: -1034718816
-      rat_15: -807174301
-      rat_2: -1752814377
-      rat_3: 808877142
-      rat_4: -841429238
-      rat_5: 238954379
-      rat_6: 940238222
-      rat_7: 954931055
-      rat_8: -452453116
-      rat_9: 2099732085
+      rat_0: -642049336
+      rat_1: -1615073549
+      rat_10: -1331752046
+      rat_11: -1728737526
+      rat_2: 870075271
+      rat_3: 1081658519
+      rat_4: -899139593
+      rat_5: 46275978
+      rat_6: 234495484
+      rat_7: -1692080666
+      rat_8: 706344829
+      rat_9: 603014102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
