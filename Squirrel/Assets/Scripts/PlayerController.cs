@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     private float attackTime;
     private float attackCounter;
     private bool isAttacking;
+    private AudioSource audioSource;
 
     [SerializeField] private float attackCooldown;
     private float cooldownCounter;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour {
         attackTime = 0.5f;
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -65,12 +67,15 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.K) && cooldownCounter <= 0) {
-            ControladorSonido.Instance.EjecutarSonido(ataqueSonido);
             attackCounter = attackTime;
             animator.SetBool("isAttacking", true);
             isAttacking = true;
             cooldownCounter = attackCooldown;
             UseItem();
+            
+            if (ataqueSonido != null) {
+                audioSource.PlayOneShot(ataqueSonido);
+            }
         }
     }
 
@@ -106,7 +111,6 @@ public class PlayerController : MonoBehaviour {
             if (newItem != null) {
                 CollectItem(newItem);
                 Destroy(collision.gameObject); 
-                ControladorSonido.Instance.EjecutarSonido(recoleccionSonido);
             }
         }
     }

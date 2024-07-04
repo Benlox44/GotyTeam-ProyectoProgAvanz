@@ -6,6 +6,7 @@ public class HumanHealth : MonoBehaviour {
     [SerializeField] private bool isBoss = false;
     [SerializeField] private int damageMultiplier = 2; 
     [SerializeField] private float speedBoost = 1f; 
+    [SerializeField] private bool isCompetitivo;
     private int currentHealth;
     public bool isDead { get; private set; } 
     public bool isLowHealth { get; private set; } 
@@ -82,7 +83,7 @@ public class HumanHealth : MonoBehaviour {
 
     public void OnDeathAnimationEnd() {
         DropItems();
-        SceneManager.LoadScene("Menu inicial");
+        if (!isCompetitivo) SceneManager.LoadScene("Menu inicial");
         Destroy(gameObject);
     }
 

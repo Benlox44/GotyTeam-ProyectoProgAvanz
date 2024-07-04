@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class SeleccionNivel : MonoBehaviour
 {
     public void CambiarNivel(int numeroNivel){
-        SceneManager.LoadScene(numeroNivel);
-        ControladorSonido.Instance.Reproducir();
-        
+        SceneManager.LoadScene(numeroNivel);       
     }
 }

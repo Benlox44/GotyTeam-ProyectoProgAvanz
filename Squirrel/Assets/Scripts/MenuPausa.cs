@@ -62,7 +62,7 @@ public class MenuPausa : MonoBehaviour
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
-        ControladorSonido.Instance.DetenerMusica();
+        
         SceneManager.LoadScene(0);
     }
 }
