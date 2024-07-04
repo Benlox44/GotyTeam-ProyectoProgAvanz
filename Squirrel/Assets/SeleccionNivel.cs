@@ -7,5 +7,6 @@ public class SeleccionNivel : MonoBehaviour
 {
     public void CambiarNivel(int numeroNivel){
         SceneManager.LoadScene(numeroNivel);
+        
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControladorSonido : MonoBehaviour
 {
@@ -28,4 +29,17 @@ public class ControladorSonido : MonoBehaviour
     {
         audioSource.PlayOneShot(sonido);
     }
+    
+    public void Reproducir()
+    {
+        audioSource.Play();
+    }
+    public void DetenerMusica()
+    {
+        audioSource.Stop();
+    }
+
+
 }
+
+
